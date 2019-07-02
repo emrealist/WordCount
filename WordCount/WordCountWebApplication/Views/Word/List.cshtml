@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WordCountWebApplication.Models.Word>
+@{
+    ViewBag.Title = "Word List";
+}
+<h2>@ViewBag.Title.</h2>
+
+
+<table style="border: solid">
+    <thead>
+        <tr>
+            <th>Text</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var wordInfo in Model)
+        {
+            <tr>
+                <td>@wordInfo.Text</td>
+                <td>@wordInfo.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>
